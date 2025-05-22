@@ -22,3 +22,6 @@ class TestCalorieCounter(unittest.TestCase):
         u = User(60, 160, 30, "high")
         expected = (10*60 + 6.25*160 - 5*30 + 5) * 1.9
         self.assertAlmostEqual(u.calculate_maintenance_calories(), expected)
+
+if __name__ == "__main__":
+    unittest.main()
