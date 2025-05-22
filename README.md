@@ -1,3 +1,6 @@
+Matas Augustas Pocius EDIf-24/2
+Kursinis darbas
+
 CALORIE COUNTER
 
 1. Įvadas
