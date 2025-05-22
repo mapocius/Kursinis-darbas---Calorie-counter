@@ -142,6 +142,16 @@ def main():
     user = User(weight, height, age, activity_level)
     data = UserData(user)
 
+    # 📂 Įkeliame anksčiau įrašytus duomenis iš CSV
+    data.load_from_file()
+
+    # ✅ Rodyti įkeltą istoriją, jei yra
+    if data.daily_history:
+        print("\n📂 Ankstesnė istorija įkelta:")
+        data.show_history()
+    else:
+        print("\nℹ️ Nėra anksčiau įrašytos istorijos.")
+
     show_maintenance(user)
 
     while True:
@@ -188,6 +198,7 @@ def main():
         print("✅ Data saved to 'history.csv'")
 
     print("\n✅ Thank you for using the Calorie Counter!\n")
+
 
 class TestCalorieCounter(unittest.TestCase):
     def test_food_calories(self):
